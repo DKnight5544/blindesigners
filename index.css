@@ -103,11 +103,10 @@ p {
 
 .card {
     width: 100%;
+    max-width:600px !important;
     border: 2px dashed black;
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-}
+
 
