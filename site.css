@@ -26,7 +26,8 @@ body {
     margin-top: -4px;
     width: 100%;
     font-size: 60px;
-    padding: 20px;
+    padding: 15px;
+    padding-left:20px;
     box-sizing: border-box;
     background-color: #a6482c;
     /*letter-spacing:2px;*/
