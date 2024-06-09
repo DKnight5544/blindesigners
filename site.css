@@ -43,7 +43,7 @@ body {
 .d {
     font-size: 35px;
     color: darkred;
-    margin-left: -13px;
+    margin-left: -16px;
     margin-right: 0;
     padding: 0px;
     animation: fadeIn 5s infinite;
@@ -52,7 +52,7 @@ body {
 .esigners {
     font-size: 35px;
     color: black;
-    margin-left: -13px;
+    margin-left: -16px;
     padding: 0;
 }
 
