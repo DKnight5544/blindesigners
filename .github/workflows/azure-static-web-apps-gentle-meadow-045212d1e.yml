@@ -1,11 +1,12 @@
 name: Azure Static Web Apps CI/CD
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
-      - WEB/
+      - /WEB/
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
