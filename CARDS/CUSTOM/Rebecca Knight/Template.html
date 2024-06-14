@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" translate="no">
 <head>
-    <title>J3</title>
+    <title>Rebecca</title>
     <meta charset="UTF-8">
 
     <style>
@@ -14,8 +14,8 @@
         }
 
         .main {
-            width: 1050px;
-            height: 600px;
+            width: 845px;
+            height: 483px;
             margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
@@ -26,57 +26,116 @@
             background-position-x: left;
             background-position-y: top;
             position: relative;
-            overflow: hidden;
+        }
+
+        .inner {
+            position: absolute;
+            top: 29px;
+            bottom: 29px;
+            left: 38px;
+            right: 38px;
+            z-index: 1;
+            border: 1px dashed white;
+        }
+
+        .common {
+            position: absolute;
+            font-family: "Bickham Script Pro";
+            font-size: 80px;
+            font-weight: 600;
         }
 
         .name {
-            position: absolute;
-            top: 45px;
-            left: 45px;
+            top: 25px;
+            left: 40px;
+            text-align: right;
             color: white;
             opacity: .6;
-            width: 150px;
-            text-align: right;
-            font-family: "Bickham Script Pro";
-            font-weight: 600;
-            font-size: 140px;
-            line-height: 80px;
         }
 
         .number {
-            position: absolute;
-            bottom:30px;
-            right: 90px;
-
+            bottom:20px;
+            right: 37px;
             text-align: right;
             color: white;
             opacity: .6;
 
-            font-family: "Bickham Script Pro";
-            font-weight: 600;
-            font-size: 140px;
-            line-height: 80px;
         }
 
         .qr {
             position: absolute;
-            top: 45px;
-            right: 90px;
+            top: 42px;
+            right: 37px;
             width: 150px;
             opacity: .6;
         }
 
+
+        .buttons {
+            margin:auto;
+            margin-top:40px;
+            width: 200px;
+        }
+
+        button{
+            width:100%;
+            font-size:20px;
+            margin-top:10px;
+        }
+
     </style>
+
+    <script>
+        let _orientation = "P";
+        let _visible = true;
+        function switchOrientation() {
+
+            let main = document.getElementById("Main");
+
+            if (_orientation === "P") {
+                main.style.width = "845px";
+                main.style.height = "483px";
+                _orientation = "L";
+            }
+            else {
+                main.style.width = "483px";
+                main.style.height = "845px";
+                _orientation = "P";
+            }
+
+        }
+        function toggleInner() {
+
+            let inner = document.getElementById("Inner");
+
+            if (_visible  === true) {
+                inner.style.display = "none";
+                _visible = false;
+            }
+            else {
+                inner.style.display = "block";
+                _visible = true;
+            }
+
+        }
+    </script>
 
 
 </head>
 
-<body>
+<body onload="switchOrientation();">
 
-    <div class="main">
+    <div id="Main" class="main">
+        <div id="Inner" class="inner">&nbsp;</div>
         <img src="../../qrcode.png" class="qr" />
-        <div class="name">Becca</div>
-        <div class="number">503-444-1717</div>
+        <div class="common name">Becca</div>
+        <div class="common number">503-444-1717</div>
+
+    </div>
+
+    <div class="buttons">
+        <button class="toggle-view" onclick="switchOrientation();">Switch View</button>
+        <button class="toggle-inner" onclick="toggleInner();">Toggle Inner</button>
     </div>
 
 
