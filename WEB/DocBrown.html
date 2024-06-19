@@ -22,9 +22,14 @@
             let id = getUrlParam("id");
 
             if (id === null) {
-                alert("No ID!");
+                id = "BACON";
             }
 
+            let idContainer = document.getElementById("IdContainer");
+            idContainer.innerHTML = idContainer.innerHTML.replace("{0}", id);
+
+            let nextVoice = document.getElementById("nextVoice");
+            nextVoice.href = nextVoice.href.replace("{0}", id)
         }
 
         // Function to get a specific URL parameter
@@ -33,9 +38,6 @@
             return params.get(param);
         }
 
-        // Example usage
-        const name = getUrlParam('name');
-        console.log(name);  // Outputs: Dave (if the URL contains ?name=Dave)
 
     </script>
 
@@ -82,51 +84,83 @@
             /*border: 2px dashed black;*/
             box-sizing: border-box;
         }
+
+        li {
+            font-weight: 400;
+            font-size: 18px;
+            margin: 10px;
+            margin-left: 20px;
+            line-height: 25px;
+            color: #075282;
+        }
+
+        #nextVoice {
+            font-weight: 400;
+            font-size: 18px;
+            margin: 10px;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 25px;
+            display: block;
+        }
     </style>
 
 </head>
 
 
 <body onload="begin();">
+
     <div class="banner-container">
 
-        <img class="card" src="images/Vista01.png" alt="Banner Image" />
+        <img class="card" src="images/DocBrown.png" alt="Banner Image" />
 
         <h3>It Works!</h3>
         <p>
-            You are here because someone gave you a card,
-            and you scanned a QR code. The system works,
-            and it can work for you too!
+            Great Scott, Marty! You're here because you scanned a QR code! The system works, and it can work for you too! This is heavy!
         </p>
 
         <h3>The Product</h3>
         <p>
-            I design fun, <b>"not-for-business"</b> cards that
-            can make money for you as you share them! <b>It's a hoot!</b>
+            Marty, I sell custom QR codes that lead to this very page. 
+            My custom QR codes cost only <b>$50</b> each, and you 
+            can make up to <b>$25</b> every time someone scans it! 
+            Think of the possibilities! It's like converting 1.21 
+            gigawatts directly into cash!
         </p>
 
         <h3>The Plan</h3>
         <p>
-            Your cards, together with this website, will most likely
-            generate new customers. 
+            Here is a strategy that you can take to the bank:
         </p>
+        <ol>
+            <li>First, purchase a custom QR code. It's simple, like the flux capacitor!</li>
+            <li>
+                Then, head over to
+                <a href="https://www.vistaprint.com/business-cards/qr-code" target="_blank" title="Link to VistaPrint.com">VistaPrint.com</a>
+                and get some cards printed with your QR code. They have many designs to choose from, like variations in the space-time continuum!
+            </li>
+            <li>Pass your cards out to everyone you meet. Just don't let Biff get his hands on one!</li>
+            <li>
+                Earn up to <b>$25</b> each time! Marty, we have to protect your future!
+            </li>
+        </ol>
         <p>
-            I pay you <b>$25</b> for each new customer
-            that your cards help me generate.
-        </p>
-        <p>
-            It's really that simple!
+            It really is that simple, Marty! Great Scott!
         </p>
 
         <h3>Let's Do This!</h3>
-        <p>
-            Let me know what you are interested in
-            or what makes you laugh.  Send me a text at:
-        </p>
-        <p>
-            <b>971-236-1579.</b>
+        <p id="IdContainer">
+            Simply text "<b>{0}</b>", to <b>971-236-1579.</b> The future is in your hands!
         </p>
 
+        <a id="nextVoice" href="Sherlock.html?id={0}">By ChatGPT: Sherlock Holmes</a>
+
     </div>
+
+
+
+
+
+
 </body>
 </html>

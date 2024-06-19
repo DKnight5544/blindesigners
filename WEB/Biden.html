@@ -28,6 +28,8 @@
             let idContainer = document.getElementById("IdContainer");
             idContainer.innerHTML = idContainer.innerHTML.replace("{0}", id);
 
+            let nextVoice = document.getElementById("nextVoice");
+            nextVoice.href = nextVoice.href.replace("{0}", id)
         }
 
         // Function to get a specific URL parameter
@@ -91,54 +93,68 @@
             line-height: 25px;
             color: #075282;
         }
+
+        #nextVoice {
+            font-weight: 400;
+            font-size: 18px;
+            margin: 10px;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 25px;
+            display: block;
+        }
     </style>
 
 </head>
 
 
 <body onload="begin();">
+
+
     <div class="banner-container">
 
-        <img class="card" src="images/Vista01.png" alt="Banner Image" />
+        <img class="card" src="images/biden.png" alt="Banner Image" />
 
         <h3>It Works!</h3>
         <p>
-            You are here because you scanned a QR code. The system works,
-            and it can work for you too!
+            Folks, let me tell you something. You're here because you scanned a QR code. And you know what? The system works. It really works! And it can work for you too! No malarkey.
         </p>
 
         <h3>The Product</h3>
         <p>
-            I sell custom QR codes that lead to this page. My
-            Custom QR codes cost <b>$50</b> each and you can 
-            make up to <b>$25</b> every time someone scans it!
+            So here's the deal. I sell custom QR codes that lead right to this page. My custom QR codes, they cost <b>$50</b> each. Now, get this: you can make up to <b>$25</b> every time someone scans it! That's like a double-dip of ice cream on a hot summer day, folks. You can't beat it.
         </p>
 
         <h3>The Plan</h3>
         <p>
-            Here is a strategy that you can take to the bank:
+            Here's the plan, and it's a good one, folks:
         </p>
         <ol>
-            <li>Purchase a custom QR code.</li>
+            <li>First, you purchase a custom QR code. Easy peasy.</li>
             <li>
-                Go to 
-                <a href="https://www.vistaprint.com/business-cards/qr-code" target="_blank" title="Link to VistaPrint.com">VistaPrint.com</a> 
-                and get some cards
-                printed that include your QR code. They have
-                many designs to choose from.
+                Then, you head over to
+                <a href="https://www.vistaprint.com/business-cards/qr-code" target="_blank" title="Link to VistaPrint.com">VistaPrint.com</a>
+                and get some cards printed with your QR code. They've got a lot of great designs. More designs than you can shake a stick at.
             </li>
-            <li>Pass your cards out.</li>
-            <li>Earn up to <b>$25</b> each!</li>
+            <li>Next, you pass those cards out like you're handing out candy on Halloween.</li>
+            <li>And then, you earn up to <b>$25</b> each time! It's like finding a twenty-dollar bill in your coat pocket, folks. It just feels good.</li>
         </ol>
         <p>
-            It really is that simple!
+            It's really that simple, folks! No kidding.
         </p>
 
         <h3>Let's Do This!</h3>
         <p id="IdContainer">
-            Simply text "<b>{0}</b>", to <b>971-236-1579.</b>
+            So, here's what you do. You simply text "<b>{0}</b>", to <b>971-236-1579.</b> That's right, folks. Just text it. You got this.
         </p>
 
+        <a id="nextVoice" href="Cartman.html?id={0}">By ChatGPT: Cartman</a>
+
     </div>
+
+
+
+
+
 </body>
 </html>
