@@ -15,95 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <script>
 
-        function begin() {
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 
-            let id = getUrlParam("id");
-
-            if (id === null) {
-                id = "BACON";
-            }
-
-            let idContainer = document.getElementById("IdContainer");
-            idContainer.innerHTML = idContainer.innerHTML.replace("{0}", id);
-
-            let nextVoice = document.getElementById("nextVoice");
-            nextVoice.href = nextVoice.href.replace("{0}", id)
-        }
-
-        // Function to get a specific URL parameter
-        function getUrlParam(param) {
-            const params = new URLSearchParams(window.location.search);
-            return params.get(param);
-        }
-
-
-    </script>
-
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            padding-bottom: 20px;
-            background-color: #f1f1f1;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .banner-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-
-        .banner {
-            width: 100%;
-        }
-
-        h3 {
-            font-weight: 600;
-            font-size: 25px;
-            letter-spacing: 1.25px;
-            margin: 35px 0 10px 20px;
-            color: #075282;
-        }
-
-        p {
-            font-weight: 400;
-            font-size: 18px;
-            margin: 10px;
-            margin-left: 20px;
-            line-height: 25px;
-            color: #075282;
-        }
-
-        .card {
-            width: 100%;
-            /*border: 2px dashed black;*/
-            box-sizing: border-box;
-        }
-
-        li {
-            font-weight: 400;
-            font-size: 18px;
-            margin: 10px;
-            margin-left: 20px;
-            line-height: 25px;
-            color: #075282;
-        }
-
-        #nextVoice {
-            font-weight: 400;
-            font-size: 18px;
-            margin: 10px;
-            margin-top: 30px;
-            text-align: center;
-            line-height: 25px;
-            display: block;
-        }
-    </style>
 
 </head>
 
@@ -121,7 +36,7 @@
 
         <h3>The Product</h3>
         <p>
-            So, here's the deal, man. I sell custom QR codes that lead right to this page. My custom QR codes cost <b>$50</b> each. And guess what? You can make up to <b>$25</b> every time someone scans it! That's freaking sweet, right?
+            So, here's the deal, man. I sell custom QR codes that lead right to this page. My custom QR codes cost <b>{cost}</b> each. And guess what? You can make up to <b>{payout}</b> every time someone scans it! That's freaking sweet, right?
         </p>
 
         <h3>The Plan</h3>
@@ -136,7 +51,7 @@
                 and get some cards printed with your QR code. They've got tons of designs, okay? More than you could ever need.
             </li>
             <li>Next, you pass those cards out everywhere. Like, just throw them at people or something.</li>
-            <li>And then, you earn up to <b>$25</b> each time! That's like getting a bunch of free snacks, you guys. Totally worth it. Just don't kill Kenny, alright?</li>
+            <li>And then, you earn up to <b>{payout}</b> each time! That's like getting a bunch of free snacks, you guys. Totally worth it. Just don't kill Kenny, alright?</li>
         </ol>
         <p>
             It's really that simple, you guys! Do it now! Respect my Authoritah!
