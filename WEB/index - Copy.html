@@ -22,11 +22,8 @@
             let id = getUrlParam("id");
 
             if (id === null) {
-                id = "BACON";
+                alert("No ID!");
             }
-
-            let idContainer = document.getElementById("IdContainer");
-            idContainer.innerHTML = idContainer.innerHTML.replace("{0}", id);
 
         }
 
@@ -36,6 +33,9 @@
             return params.get(param);
         }
 
+        // Example usage
+        const name = getUrlParam('name');
+        console.log(name);  // Outputs: Dave (if the URL contains ?name=Dave)
 
     </script>
 
@@ -82,15 +82,6 @@
             /*border: 2px dashed black;*/
             box-sizing: border-box;
         }
-
-        li {
-            font-weight: 400;
-            font-size: 18px;
-            margin: 10px;
-            margin-left: 20px;
-            line-height: 25px;
-            color: #075282;
-        }
     </style>
 
 </head>
@@ -103,40 +94,37 @@
 
         <h3>It Works!</h3>
         <p>
-            You are here because you scanned a QR code. The system works,
+            You are here because someone gave you a card,
+            and you scanned a QR code. The system works,
             and it can work for you too!
         </p>
 
         <h3>The Product</h3>
         <p>
-            I sell custom QR codes that lead to this page. My
-            Custom QR codes cost <b>$50</b> each and you can 
-            make up to <b>$25</b> every time someone scans it!
+            I design fun, <b>"not-for-business"</b> cards that
+            can make money for you as you share them! <b>It's a hoot!</b>
         </p>
 
         <h3>The Plan</h3>
         <p>
-            Here is a strategy that you can take to the bank:
+            Your cards, together with this website, will most likely
+            generate new customers. 
         </p>
-        <ol>
-            <li>Purchase a custom QR code.</li>
-            <li>
-                Go to 
-                <a href="https://www.vistaprint.com/business-cards/qr-code" target="_blank" title="Link to VistaPrint.com">VistaPrint.com</a> 
-                and get some cards
-                printed that include your QR code. They have
-                many designs to choose from.
-            </li>
-            <li>Pass your cards out.</li>
-            <li>Earn up to <b>$25</b> each!</li>
-        </ol>
         <p>
-            It really is that simple!
+            I pay you <b>$25</b> for each new customer
+            that your cards help me generate.
+        </p>
+        <p>
+            It's really that simple!
         </p>
 
         <h3>Let's Do This!</h3>
-        <p id="IdContainer">
-            Simply text "<b>{0}</b>", to <b>971-236-1579.</b>
+        <p>
+            Let me know what you are interested in
+            or what makes you laugh.  Send me a text at:
+        </p>
+        <p>
+            <b>971-236-1579.</b>
         </p>
 
     </div>
