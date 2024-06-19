@@ -28,8 +28,6 @@
             let idContainer = document.getElementById("IdContainer");
             idContainer.innerHTML = idContainer.innerHTML.replace("{0}", id);
 
-            let nextVoice = document.getElementById("nextVoice");
-            nextVoice.href = nextVoice.href.replace("{0}", id)
         }
 
         // Function to get a specific URL parameter
@@ -93,24 +91,12 @@
             line-height: 25px;
             color: #075282;
         }
-
-        #nextVoice {
-            font-weight: 400;
-            font-size: 18px;
-            margin: 10px;
-            margin-top:30px;
-            text-align:center;
-            line-height: 25px;
-            display:block;
-        }
-
     </style>
 
 </head>
 
 
 <body onload="begin();">
-
     <div class="banner-container">
 
         <img class="card" src="images/Vista01.png" alt="Banner Image" />
@@ -153,9 +139,6 @@
             Simply text "<b>{0}</b>", to <b>971-236-1579.</b>
         </p>
 
-        <a id="nextVoice" href="trump.html?id={0}">Revoice as Donald Trump</a>
-
     </div>
-
 </body>
 </html>
