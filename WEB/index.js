@@ -8,14 +8,12 @@ function begin() {
         id = "BACON";
     }
 
-    let idContainer = document.getElementById("IdContainer");
-    idContainer.innerHTML = idContainer.innerHTML.replace("{0}", id);
-
-    let nextVoice = document.getElementById("nextVoice");
-    nextVoice.href = nextVoice.href.replace("{0}", id)
-
     const htmlBody = document.body.innerHTML;
-    const updatedHtmlBody = htmlBody.replace(/{cost}/g, "$40").replace(/{payout}/g, "$20");
+    const updatedHtmlBody = htmlBody
+        .replace(/{cost}/g, "$40")
+        .replace(/{payout}/g, "$20")
+        .replace(/{id}/g, id)
+        ;
     document.body.innerHTML = updatedHtmlBody;
 
 }
