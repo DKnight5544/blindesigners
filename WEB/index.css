@@ -46,8 +46,13 @@ li {
     font-weight: 400;
     font-size: 18px;
     margin-top: 10px;
+    margin-left: 0px;
     line-height: 25px;
     color: #075282;
+}
+
+ul > li {
+    margin-left: -20px;
 }
 
 .endorsement-container {
