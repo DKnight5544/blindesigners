@@ -16,6 +16,10 @@ function begin() {
         ;
     document.body.innerHTML = updatedHtmlBody;
 
+    const image = document.getElementById("QRCodeImage");
+    image.src = `images/${id}_FRAMED.png`;
+
+
 }
 
 // Function to get a specific URL parameter
