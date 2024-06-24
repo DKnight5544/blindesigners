@@ -5,7 +5,7 @@ function begin() {
     let id = getUrlParam("id");
 
     if (id === null) {
-        id = "CARTMAN";
+        id = "Sample";
     }
 
     const htmlBody = document.body.innerHTML;
