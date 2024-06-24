@@ -43,6 +43,7 @@ p {
 
 .square {
     width: 50%;
+    margin-left:20px;
     box-sizing: border-box;
 }
 
