@@ -5,8 +5,12 @@ function begin() {
     let id = getUrlParam("id");
 
     if (id === null) {
-        id = "Sample";
-    }
+        id = "ScanMe_0002";
+    } 
+
+    const image = document.getElementById("QRCodeImage");
+    const sampleName = id.split("_")[0];
+    image.src = `samples/${sampleName}.png`;
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
@@ -15,9 +19,6 @@ function begin() {
         .replace(/{id}/g, id)
         ;
     document.body.innerHTML = updatedHtmlBody;
-
-    const image = document.getElementById("QRCodeImage");
-    image.src = `images/${id}.png`;
 
 
 }
