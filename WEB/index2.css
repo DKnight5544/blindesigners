@@ -1,0 +1,101 @@
+﻿/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.banner-container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid #075282;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #075282;
+    margin: 0 0 10px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #075282;
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 10px 0;
+}
+
+.lifted {
+    border: 2px dashed #075282;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.square {
+    width: 200px;
+    margin: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.frames {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.frame-item {
+    text-align: center;
+}
+
+.frame-title {
+    margin-top: 5px;
+    margin-bottom:0px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #075282;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+
+    .banner-container {
+        border: none;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .square {
+        width: 125px;
+    }
+}
