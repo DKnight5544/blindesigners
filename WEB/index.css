@@ -38,7 +38,11 @@ p {
 
 .card {
     width: 100%;
-    /*border: 2px dashed black;*/
+    box-sizing: border-box;
+}
+
+.square {
+    width: 50%;
     box-sizing: border-box;
 }
 
@@ -60,4 +64,11 @@ ul > li {
     border: 2px solid gold; 
     padding: 20px; 
     background-color: #f9f9f9;
+}
+
+.lifted {
+    border: 2px dashed #075282;
+    box-sizing:border-box;
+    padding:10px;
+    display:inline-block;
 }
