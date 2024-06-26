@@ -5,7 +5,7 @@ function begin() {
     let id = getUrlParam("id");
 
     if (id === null) {
-        id = "ScanMe_0002";
+        id = "ScanMe_0001";
     } 
 
     const image = document.getElementById("QRCodeImage");
