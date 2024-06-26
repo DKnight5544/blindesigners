@@ -4,7 +4,7 @@ function begin() {
 
     let id = getUrlParam("id");
 
-    if (id === null) {
+    if (id === null || id === "ScanMe_0001") {
         id = "DWK_ScanMe";
     } 
 
