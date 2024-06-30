@@ -5,10 +5,10 @@ function begin() {
     let id = getUrlParam("id");
 
     if (id === null || id === "ScanMe_0001") {
-        id = "DWK_ScanMe";
+        id = "DWK_Mobster";
     } 
 
-    const image = document.getElementById("QRCodeImage");
+    const image = document.getElementById("AvatarImage");
     image.src = `customers/${id}.png`;
     id = id.split("_")[0];
 
