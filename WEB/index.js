@@ -9,9 +9,8 @@ function begin() {
     } 
 
     const image = document.getElementById("QRCodeImage");
-    const sampleName = id.split("_")[1];
+    image.src = `customers/${id}.png`;
     id = id.split("_")[0];
-    image.src = `samples/${sampleName}.png`;
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
