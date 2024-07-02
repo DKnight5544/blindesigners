@@ -4,17 +4,9 @@ function begin() {
 
     let id = getUrlParam("id");
 
-    if (id === "ScanMe_0001") {
-        id = window.location.replace("ScanMe.html?id=DWK");
-    }
-
-    if (id === null) {
-        id = "DWK_Mobster";
-    } 
 
     const image = document.getElementById("AvatarImage");
-    image.src = `customers/${id}.png`;
-    id = id.split("_")[0];
+    image.src = `ScanMe/${id}.png`;
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
@@ -31,4 +23,13 @@ function begin() {
 function getUrlParam(param) {
     const params = new URLSearchParams(window.location.search);
     return params.get(param);
+}
+
+function setStyle(style) {
+    document.getElementById("KH").style.display = "none";
+    document.getElementById("JO").style.display = "none";
+    document.getElementById("JH").style.display = "none";
+    document.getElementById("DT").style.display = "none";
+    document.getElementById("Gemstones").style.display = "none";
+    document.getElementById(style).style.display = "block";
 }
