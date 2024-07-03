@@ -4,17 +4,9 @@ function begin() {
 
     let id = getUrlParam("id");
 
-    if (id === "ScanMe_0001") {
-        window.location.replace("ScanMe.html?id=DWK");
-    }
 
-    if (id === null) {
-        window.location.replace("Cards.html?id=Cartman");
-    } 
-
-    const image = document.getElementById("AvatarImage");
-    image.src = `customers/${id}.png`;
-    id = id.split("_")[0];
+    const image = document.getElementById("CardImage");
+    image.src = `Cards/${id}.png`;
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
