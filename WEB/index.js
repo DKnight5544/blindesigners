@@ -14,7 +14,6 @@ function begin() {
 
     const image = document.getElementById("AvatarImage");
     image.src = `customers/${id}.png`;
-    id = id.split("_")[0];
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
