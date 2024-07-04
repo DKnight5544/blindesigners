@@ -8,13 +8,11 @@ function begin() {
         window.location.replace("Cards.html?id=Cartman");
     }
 
-    if (id === "DWK_MobsterM01") {
-        id = "Rocko";
-    }
+    if (id === "DWK_Mobster") {id = "Rocko";}
 
-    if (id === "ScanMe_0001") {
-        id = "Ponzi";
-    } 
+    if (id === "DWK_MobsterM01") {id = "Rocko";}
+
+    if (id === "ScanMe_0001") {id = "Ponzi";} 
 
     const image = document.getElementById("AvatarImage");
     image.src = `customers/${id}.png`;
