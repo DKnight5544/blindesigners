@@ -5,6 +5,10 @@ function begin() {
     let id = getUrlParam("id");
 
 
+    if (id === null) {
+        id = "DWK";
+    }
+
     const image = document.getElementById("AvatarImage");
     image.src = `ScanMe/${id}.png`;
 

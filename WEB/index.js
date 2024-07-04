@@ -4,12 +4,16 @@ function begin() {
 
     let id = getUrlParam("id");
 
-    if (id === "ScanMe_0001") {
-        window.location.replace("ScanMe.html?id=DWK");
-    }
-
     if (id === null) {
         window.location.replace("Cards.html?id=Cartman");
+    }
+
+    if (id === "DWK_MobsterM01") {
+        id = "Rocko";
+    }
+
+    if (id === "ScanMe_0001") {
+        id = "Ponzi";
     } 
 
     const image = document.getElementById("AvatarImage");
