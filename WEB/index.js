@@ -12,7 +12,7 @@ function begin() {
     else if (id === "DWK_MobsterM01") {id = "Rocko";}
     else if (id === "ScanMe_0001") {id = "Ponzi";} 
 
-    const image = document.getElementById("AvatarImage");
+    const image = document.getElementById("BannerImage");
     image.src = `customers/${id}.png`;
     id = id.split("_")[0];
 
