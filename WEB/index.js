@@ -49,5 +49,6 @@ function getUrlParam(param) {
 
 
 function toggleExpand(event) {
+    alert("image clicked");
     this.classList.toggle('squareSelected');
 }
