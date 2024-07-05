@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+
+
+    <script>
+        let _orientation = "P";
+        let _visible = true;
+        function switchOrientation() {
+
+            let main = document.getElementById("Main");
+
+            if (_orientation === "P") {
+                main.style.width = "483px";
+                main.style.height = "483px";
+                _orientation = "L";
+            }
+            else {
+                main.style.width = "483px";
+                main.style.height = "483px";
+                _orientation = "P";
+            }
+
+        }
+        function toggleInner() {
+
+            let inner = document.getElementById("Inner");
+
+            if (_visible === true) {
+                inner.style.display = "none";
+                _visible = false;
+            }
+            else {
+                inner.style.display = "block";
+                _visible = true;
+            }
+
+        }
+    </script>
+
+
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 20px;
+            background-color: white;
+        }
+
+        .main {
+            width: 483px;
+            height: 483px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px dashed grey;
+            box-sizing: border-box;
+            background-image: url("BG01.png");
+            background-size: cover;
+            background-position-x: left;
+            background-position-y: top;
+            position: relative;
+        }
+
+        .inner {
+            position: absolute;
+            top: 24px;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            z-index: 1;
+            border: 1px dashed white;
+        }
+
+
+        .qr {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 150px;
+            opacity: .7;
+            border-radius:10px;
+        }
+
+
+        .buttons {
+            margin: auto;
+            margin-top: 40px;
+            width: 200px;
+        }
+
+        button {
+            width: 100%;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body onload="switchOrientation();">
+
+    <div id="Main" class="main">
+        <div id="Inner" class="inner">&nbsp;</div>
+        <img src="../../FRAMES/QRSample.png" class="qr" />
+
+    </div>
+
+    <div class="buttons">
+        <button class="toggle-view" onclick="switchOrientation();">Switch View</button>
+        <button class="toggle-inner" onclick="toggleInner();">Toggle Inner</button>
+    </div>
+
+
+</body>
+</html>
