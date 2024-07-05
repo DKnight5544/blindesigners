@@ -1,5 +1,5 @@
 ﻿
-
+const INIT_WIDTH = "125px";
 function begin() {
 
     let id = getUrlParam("id");
@@ -29,7 +29,7 @@ function begin() {
     var squares = document.querySelectorAll('.square');
 
     squares.forEach(function (square) {
-        square.style.width = "200px";
+        square.style.width = INIT_WIDTH;
         square.addEventListener('click', toggleExpand);
     });
 
@@ -44,5 +44,5 @@ function getUrlParam(param) {
 
 
 function toggleExpand(event) {
-    this.style.width = (this.style.width === '200px') ? '80%' : '200px';
+    this.style.width = (this.style.width === INIT_WIDTH) ? '80%' : INIT_WIDTH;
 }
