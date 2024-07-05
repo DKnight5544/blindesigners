@@ -49,6 +49,9 @@ function getUrlParam(param) {
 
 
 function toggleExpand(event) {
-    alert("image clicked");
-    this.classList.toggle('squareSelected');
+    if (this.className.indexOf('expanded') > -1) {
+        this.className = this.className.replace(' expanded', '');
+    } else {
+        this.className += ' expanded';
+    }
 }
