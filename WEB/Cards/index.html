@@ -16,16 +16,32 @@
 
     <script>
 
-        // Add JavaScript file with cache busting
-        var script = document.createElement('script');
-        script.src = 'index.js?v=' + new Date().getTime();
-        document.head.appendChild(script);
+        let id = new URLSearchParams(window.location.search).get("id");
+        if (id === null) {
+            window.location.replace("index.html?id=Cartman");
+        }
 
         // Add CSS file with cache busting
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = 'index.css?v=' + new Date().getTime();
         document.head.appendChild(link);
+
+        function begin() {
+
+            const image = document.getElementById("CardImage");
+            image.src = `Customers/${id}.png`;
+
+            const htmlBody = document.body.innerHTML;
+            const updatedHtmlBody = htmlBody
+                .replace(/{cost}/g, "<b>$40</b>")
+                .replace(/{payout}/g, "<b>$20</b>")
+                .replace(/{id}/g, id)
+                ;
+            document.body.innerHTML = updatedHtmlBody;
+
+        }
+
 
     </script>
 

@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="index.css">
     <script>
 
+        let id = new URLSearchParams(window.location.search).get("id");
+        if (id === null) {
+            window.location.replace("Cards/index.html?id=Cartman");
+        }
+
+        if (id === "DWK_Mobster") { id = "Rocko"; }
+        else if (id === "DWK_MobsterM01") { id = "Rocko"; }
+        else if (id === "ScanMe_0001") { id = "Rocko"; }
+
         // Add JavaScript file with cache busting
         var script = document.createElement('script');
         script.src = 'index.js?v=' + new Date().getTime();
