@@ -49,9 +49,5 @@ function getUrlParam(param) {
 
 
 function toggleExpand(event) {
-    if (this.className.indexOf('expanded') > -1) {
-        this.className = this.className.replace(' expanded', '');
-    } else {
-        this.className += ' expanded';
-    }
+    this.className = (this.className === 'square') ? 'large-square' : 'square';
 }
