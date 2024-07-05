@@ -10,7 +10,7 @@ function begin() {
 
     if (id === "DWK_Mobster") {id = "Rocko";}
     else if (id === "DWK_MobsterM01") {id = "Rocko";}
-    else if (id === "ScanMe_0001") {id = "Ponzi";} 
+    else if (id === "ScanMe_0001") {id = "Rocko";} 
 
     const image = document.getElementById("BannerImage");
     image.src = `customers/${id}.png`;
