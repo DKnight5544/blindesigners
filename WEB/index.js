@@ -8,9 +8,9 @@ function begin() {
         window.location.replace("Cards/Cards.html?id=Cartman");
     }
 
-    if (id === "DWK_Mobster") {id = "Rocko";}
-    else if (id === "DWK_MobsterM01") {id = "Rocko";}
-    else if (id === "ScanMe_0001") {id = "Rocko";} 
+    if (id === "DWK_Mobster") { id = "Rocko"; }
+    else if (id === "DWK_MobsterM01") { id = "Rocko"; }
+    else if (id === "ScanMe_0001") { id = "Rocko"; }
 
     const image = document.getElementById("BannerImage");
     image.src = `customers/${id}.png`;
@@ -27,10 +27,11 @@ function begin() {
 
     // Add event listener to each sample avatar.
     var squares = document.querySelectorAll('.square');
+
+
     squares.forEach(function (square) {
-        square.addEventListener('click', function () {
-            this.classList.toggle('squareSelected');
-        });
+        square.addEventListener('touchstart', toggleExpand);
+        square.addEventListener('click', toggleExpand);
     });
 
 
@@ -40,4 +41,9 @@ function begin() {
 function getUrlParam(param) {
     const params = new URLSearchParams(window.location.search);
     return params.get(param);
+}
+
+
+function toggleExpand(event) {
+    this.classList.toggle('squareSelected');
 }
