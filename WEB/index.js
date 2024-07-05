@@ -5,7 +5,7 @@ function begin() {
     let id = getUrlParam("id");
 
     if (id === null) {
-        window.location.replace("Cards.html?id=Cartman");
+        window.location.replace("Cards/Cards.html?id=Cartman");
     }
 
     if (id === "DWK_Mobster") {id = "Rocko";}
@@ -23,6 +23,15 @@ function begin() {
         .replace(/{id}/g, id)
         ;
     document.body.innerHTML = updatedHtmlBody;
+
+
+    // Add event listener to each sample avatar.
+    var squares = document.querySelectorAll('.square');
+    squares.forEach(function (square) {
+        square.addEventListener('click', function () {
+            this.classList.toggle('squareSelected');
+        });
+    });
 
 
 }

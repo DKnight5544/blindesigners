@@ -11,6 +11,21 @@
     <meta property="og:url" content="https://www.clikazon.com/index.html">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script>
+
+        // Add JavaScript file with cache busting
+        var script = document.createElement('script');
+        script.src = 'index.js?v=' + new Date().getTime();
+        document.head.appendChild(script);
+
+        // Add CSS file with cache busting
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'styles.css?v=' + new Date().getTime();
+        document.head.appendChild(link);
+
+    </script>
+
 </head>
 <body onload="begin();">
     <div id="Main" class="main-container">
@@ -20,20 +35,19 @@
         <p>
             First off, we create a custom QR code that can be linked to any
             website you feel like promoting, see? Then we wrap it in one of our
-            gangster-themed frames, see?
-            Our "focus group" predicts a 99% scan rate, see?
+            <b>sure-to-be-scanned</b>, gangster-themed frames, see?
             Total Grift: {cost}!
         </p>
 
         <h1>Da Plan</h1>
         <p>
-            If you want a share of the grift, you can link your custom QR codes
-            to this very site and help us get the word out!
+            <b>Check dis out:</b> if you want a piece of da action, you can join the family and
+            link your custom QR code to this very site!
         </p>
 
         <p>
             If your custom QR code "scores," we pay a "kickback" of
-            {payout} to someone in the "family," see? Here's how it shakes out...
+            {payout} to someone in the family, see?
         </p>
 
         <p>
@@ -41,14 +55,18 @@
             custom QR code rakes in!
         </p>
 
+        <hr />
         <p>
-            <b>Now run this in an endless loop:</b> You also get a {payout} tribute for every <b>odd-numbered</b> score
-            <i>those</i> guys rake in.
+            <b>
+                Bonus: <gold><i>everyone</i></gold> you ever get paid for will give you
+                their odd-numbered scores as tribute! <gold>Bing Bada Boom!</gold>
+            </b>
         </p>
+        <hr />
 
         <p>
-            You get da picture, pigeon? Now the only question left is how soon
-            you wanna get started. You da kind of mook who lets another wiseguy
+            You get da picture, pigeon? Now the only question left is "how soon
+            you wanna get started?" Are you da kind of mook who lets another wiseguy
             poach his take? If you want your percentage...
         </p>
         <p>
@@ -105,8 +123,6 @@
             and shipped for around $30. Then you have something tangible. People like tangible.
         </p>
     </div>
-
-    <script src="index.js"></script>
 
 </body>
 </html>

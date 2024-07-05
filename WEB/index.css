@@ -56,6 +56,11 @@ p {
     margin-top: 5px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: width 0.5s ease;
+}
+
+.squareSelected{
+    width:80%;
 }
 
 .card {
@@ -72,7 +77,14 @@ a {
         text-decoration: underline;
     }
 
+hr{
+    margin-top:20px;
+}
 
+gold {
+    color: #d4af37;
+    text-shadow: 2px 2px 5px #000;
+}
 
 /* Responsive adjustments */
 @media screen and (max-width: 600px) {

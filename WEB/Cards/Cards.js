@@ -5,8 +5,8 @@ function begin() {
     let id = getUrlParam("id");
 
 
-    const image = document.getElementById("AvatarImage");
-    image.src = `ScanMe/${id}.png`;
+    const image = document.getElementById("CardImage");
+    image.src = `Customers/${id}.png`;
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
@@ -23,13 +23,4 @@ function begin() {
 function getUrlParam(param) {
     const params = new URLSearchParams(window.location.search);
     return params.get(param);
-}
-
-function setStyle(style) {
-    document.getElementById("KH").style.display = "none";
-    document.getElementById("JO").style.display = "none";
-    document.getElementById("JH").style.display = "none";
-    document.getElementById("DT").style.display = "none";
-    document.getElementById("Gemstones").style.display = "none";
-    document.getElementById(style).style.display = "block";
 }
