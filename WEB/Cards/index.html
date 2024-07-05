@@ -14,12 +14,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="Cards.css">
+    <script>
+
+        // Add JavaScript file with cache busting
+        var script = document.createElement('script');
+        script.src = 'index.js?v=' + new Date().getTime();
+        document.head.appendChild(script);
+
+        // Add CSS file with cache busting
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'index.css?v=' + new Date().getTime();
+        document.head.appendChild(link);
+
+    </script>
 
 </head>
 <body onload="begin();">
 
     <div id="Main" class="main-container">
+
         <img id="CardImage" class="card" />
 
         <h1>Greetings!</h1>
@@ -56,9 +70,6 @@
 
 
     </div>
-
-
-    <script src="Cards.js"></script>
 
 </body>
 </html>

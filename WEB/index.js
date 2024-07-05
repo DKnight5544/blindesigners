@@ -5,7 +5,7 @@ function begin() {
     let id = getUrlParam("id");
 
     if (id === null) {
-        window.location.replace("Cards/Cards.html?id=Cartman");
+        window.location.replace("Cards/index.html?id=Cartman");
     }
 
     if (id === "DWK_Mobster") { id = "Rocko"; }

@@ -5,6 +5,14 @@ function begin() {
     let id = getUrlParam("id");
 
 
+    if (id === null) {
+        window.location.replace("index.html?id=Cartman");
+    }
+
+    if (id === null) {id = "Cartman";}
+
+    if (id === "DWK_Mobster") {  }
+
     const image = document.getElementById("CardImage");
     image.src = `Customers/${id}.png`;
 
