@@ -26,17 +26,11 @@ function begin() {
 
 
     // Add event listener to each sample avatar.
-    //var squares = document.querySelectorAll('.square');
-    var squares = document.getElementsByClassName("square");
+    var squares = document.querySelectorAll('.square');
 
-    Array.prototype.forEach.call(squares, function (square) {
+    squares.forEach(function (square) {
         square.addEventListener('click', toggleExpand);
-        square.addEventListener('touchstart', toggleExpand);
     });
-    //squares.forEach(function (square) {
-    //    square.addEventListener('click', toggleExpand);
-    //    square.addEventListener('touchstart', toggleExpand);
-    //});
 
 
 }
