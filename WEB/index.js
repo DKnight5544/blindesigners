@@ -29,6 +29,7 @@ function begin() {
     var squares = document.querySelectorAll('.square');
 
     squares.forEach(function (square) {
+        square.style.width = "200px";
         square.addEventListener('click', toggleExpand);
     });
 
@@ -43,5 +44,5 @@ function getUrlParam(param) {
 
 
 function toggleExpand(event) {
-    this.className = (this.className === 'square') ? 'large-square' : 'square';
+    this.style.width = (this.style.width === '200px') ? '80%' : '200px';
 }
