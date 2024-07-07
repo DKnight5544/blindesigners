@@ -9,8 +9,8 @@ function begin() {
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
-        .replace(/{cost}/g, "<b>$40</b>")
-        .replace(/{payout}/g, "<b>$20</b>")
+        .replace(/{cost}/g, "<gold>$40</gold>")
+        .replace(/{payout}/g, "<gold>$20</gold>")
         .replace(/{id}/g, id)
         ;
     document.body.innerHTML = updatedHtmlBody;
