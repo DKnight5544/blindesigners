@@ -9,7 +9,7 @@ function begin() {
 
     const htmlBody = document.body.innerHTML;
     const updatedHtmlBody = htmlBody
-        .replace(/{cost}/g, "<gold>$40</gold>")
+        .replace(/{cost}/g, "<gold>$35</gold>")
         .replace(/{payout}/g, "<gold>$20</gold>")
         .replace(/{id}/g, id)
         ;
