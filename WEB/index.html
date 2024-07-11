@@ -48,6 +48,8 @@
             // Add event listener to each sample avatar.
             var squares = document.querySelectorAll('.square');
 
+            INIT_WIDTH = "175px";
+
             squares.forEach(function (square) {
                 square.style.width = INIT_WIDTH;
                 square.addEventListener('click', toggleExpand);
@@ -55,7 +57,7 @@
 
         }
 
-        function toggleExpand(event) {
+        function toggleExpand() {
             this.style.width = (this.style.width === INIT_WIDTH) ? '80%' : INIT_WIDTH;
         }
 
