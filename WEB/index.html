@@ -9,8 +9,14 @@
     <meta property="og:title" content="Da Family Business">
     <meta property="og:description" content="Custom QR Codes">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+
     <script>
+
+        // Add CSS file with cache busting
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'index.css?v=' + new Date().getTime();
+        document.head.appendChild(link);
 
         let id = new URLSearchParams(window.location.search).get("id");
         if (id === null) {
@@ -21,16 +27,37 @@
         else if (id === "DWK_MobsterM01") { id = "Rocko"; }
         else if (id === "ScanMe_0001") { id = "Rocko"; }
 
-        // Add JavaScript file with cache busting
-        var script = document.createElement('script');
-        script.src = 'index.js?v=' + new Date().getTime();
-        document.head.appendChild(script);
+        document.addEventListener('DOMContentLoaded', () => {
+            const image = document.getElementById("BannerImage");
+            image.src = `customers/${id}.png`;
+        });
 
-        // Add CSS file with cache busting
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'index.css?v=' + new Date().getTime();
-        document.head.appendChild(link);
+        function begin() {
+
+            id = id.split("_")[0];
+
+            const htmlBody = document.body.innerHTML;
+            const updatedHtmlBody = htmlBody
+                .replace(/{cost}/g, "<gold>$35</gold>")
+                .replace(/{payout}/g, "<gold>$20</gold>")
+                .replace(/{id}/g, id)
+                ;
+            document.body.innerHTML = updatedHtmlBody;
+
+
+            // Add event listener to each sample avatar.
+            var squares = document.querySelectorAll('.square');
+
+            squares.forEach(function (square) {
+                square.style.width = INIT_WIDTH;
+                square.addEventListener('click', toggleExpand);
+            });
+
+        }
+
+        function toggleExpand(event) {
+            this.style.width = (this.style.width === INIT_WIDTH) ? '80%' : INIT_WIDTH;
+        }
 
     </script>
 
@@ -38,7 +65,7 @@
 <body onload="begin();">
     <div id="Main" class="main-container">
 
-        <img id="BannerImage" class="card" alt="Banner Image" src="images/banner.png" />
+        <img id="BannerImage" class="card" alt="Banner Image" onload="loadBanner();" />
 
         <h1>Da Goods</h1>
         <p>
