@@ -19,13 +19,17 @@
         document.head.appendChild(link);
 
         let id = new URLSearchParams(window.location.search).get("id");
+
         if (id === null) {
             window.location.replace("Cards/index.html?id=Cartman");
         }
 
+        if (id === "ScanMe_0001"){
+            window.location.replace("https://www.amazon.com/dp/B0DJFJYDSH/ref=cm_sw_r_as_gl_apa_gl_i_DBF5JYZYA17D5BE2733W?linkCode=ml1&tag=dorkydomains-20");
+        }
+
         if (id === "DWK_Mobster") { id = "Rocko"; }
         else if (id === "DWK_MobsterM01") { id = "Rocko"; }
-        else if (id === "ScanMe_0001") { id = "Rocko"; }
 
         document.addEventListener('DOMContentLoaded', () => {
             const image = document.getElementById("BannerImage");
