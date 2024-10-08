@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Family Business</title>
+    <meta name="description" content="Custom QR Codes">
+    <meta name="keywords" content="QR Codes, affiliate, referral program">
+    <meta property="og:title" content="Da Family Business">
+    <meta property="og:description" content="Custom QR Codes">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <script>
+
+        // Add CSS file with cache busting
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'index.css?v=' + new Date().getTime();
+        document.head.appendChild(link);
+
+        let id = new URLSearchParams(window.location.search).get("id");
+
+        if (id === null) {
+            window.location.replace("Cards/index.html?id=Cartman");
+        }
+
+        if (id === "ScanMe_0001"){
+            window.location.replace("https://www.jollyjournals.com");
+        }
+
+        if (id === "DWK_Mobster") { id = "Rocko"; }
+        else if (id === "DWK_MobsterM01") { id = "Rocko"; }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const image = document.getElementById("BannerImage");
+            image.src = `customers/${id}.png`;
+        });
+
+        function begin() {
+
+            id = id.split("_")[0];
+
+            const htmlBody = document.body.innerHTML;
+            const updatedHtmlBody = htmlBody
+                .replace(/{cost}/g, "<gold>$35</gold>")
+                .replace(/{payout}/g, "<gold>$20</gold>")
+                .replace(/{id}/g, id)
+                ;
+            document.body.innerHTML = updatedHtmlBody;
+
+
+            // Add event listener to each sample avatar.
+            var squares = document.querySelectorAll('.square');
+
+            INIT_WIDTH = "130px";
+
+            squares.forEach(function (square) {
+                square.style.width = INIT_WIDTH;
+                square.addEventListener('click', toggleExpand);
+            });
+
+        }
+
+        function toggleExpand() {
+            this.style.width = (this.style.width === INIT_WIDTH) ? '80%' : INIT_WIDTH;
+        }
+
+    </script>
+
+</head>
+<body onload="begin();">
+    <div id="Main" class="main-container">
+
+        <img id="BannerImage" class="card" alt="Banner Image" onload="loadBanner();" />
+
+        <h1>Da Goods</h1>
+        <p>
+            Here we are all about helping you <gold>get your gangster on!</gold> See?
+        </p>
+        <p>
+            There's a little gangster in all of us just begging to be let out. See?
+        </p>
+        <p>
+            We deal in <gold>Custom Avatars</gold> that can be QR code linked to anywheres
+            on the interwebs!  You can use them to <gold>promote anything you want!</gold> They're fun,
+            engaging, and <gold>folks will scan 'em!</gold> See?
+        </p>
+        <p>
+            Total Damage: {cost}<gold>!</gold>
+        </p>
+
+        <h1>Da Grift</h1>
+        <p>
+            <gold>If your avatar</gold> is linked to this website, then you can use it 
+            to invite your pals to grab an avatar and <gold>start collecting kickbacks!</gold> See?
+        </p>
+        <p>
+            <gold>As a Family Guy</gold>, you get {payout} for every <gold>even-numbered</gold>
+            score you rake in. See?
+        </p>
+
+        <p>
+            And you get another {payout} each for the <gold>odd-numbered</gold> scores
+            those guys rake in. See?
+        </p>
+
+        <p>
+            And you get another {payout} each for the <gold>odd-numbered</gold> scores
+            those guys rake in. See?
+        </p>
+
+        <p>
+            And you get another {payout} each for the <gold>odd-numbered</gold> scores
+            those guys rake in. See?
+        </p>
+
+        <p>. . .</p>
+
+        <p>. . .</p>
+
+        <p>. . .</p>
+
+        <p>. . .</p>
+
+        <p>
+            <gold>Bada Bing Bada Boom!</gold>
+        </p>
+
+        <p>
+            You get da picture, pigeon, or are you da kind of <gold>mook</gold> who lets
+            another wiseguy <gold>poach his take</gold>?
+        </p>
+
+        <p>
+            <gold>First choose your Avatar:</gold>
+        </p>
+
+        <div class="frames">
+            <div class="frame-item">
+                <p class="frame-title">M01</p>
+                <img class="square" src="samples/M01.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M02</p>
+                <img class="square" src="samples/M02.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M03</p>
+                <img class="square" src="samples/M03.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M04</p>
+                <img class="square" src="samples/M04.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M05</p>
+                <img class="square" src="samples/M05.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M06</p>
+                <img class="square" src="samples/M06.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M07</p>
+                <img class="square" src="samples/M07.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M08</p>
+                <img class="square" src="samples/M08.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M09</p>
+                <img class="square" src="samples/M09.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M10</p>
+                <img class="square" src="samples/M10.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M11</p>
+                <img class="square" src="samples/M11.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M12</p>
+                <img class="square" src="samples/M12.png">
+            </div>
+            <div class="frame-item">
+                <p class="frame-title">M13</p>
+                <img class="square" src="samples/M13.png">
+            </div>
+        </div>
+
+        <p>
+            <gold>Now fill out da form and grab your piece of the action!</gold>
+        </p>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvtJeYDPd8qaRaiG7q7MC8E6RBhnF9HArssh65rQqwmjPH5Q/viewform?usp=pp_url&entry.2005620554={id}&entry.220734144=Da+Family+Website"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">
+            Loading…
+        </iframe>
+
+        <p>
+            <b>Pro Tip:</b> <gold>Get your avatar printed!</gold>
+        </p>
+        <p>
+            You can have 100 high-quality 2.5" x 2.5" cards printed at
+            <a href="https://www.vistaprint.com/business-cards/qr-code" target="_blank">VistaPrint</a>
+            and shipped for around $30. Then you have something tangible. People like tangible.
+        </p>
+    </div>
+
+</body>
+</html>
