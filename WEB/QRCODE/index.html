@@ -21,15 +21,10 @@
         let id = new URLSearchParams(window.location.search).get("id");
 
         if (id === null) {
-            window.location.replace("Cards/index.html?id=Cartman");
+            window.location.replace("Cards/index.html?id=DWK_MobsterM01");
         }
 
-        if (id === "ScanMe_0001"){
-            window.location.replace("https://www.jollyjournals.com");
-        }
-
-        if (id === "DWK_Mobster") { id = "Rocko"; }
-        else if (id === "DWK_MobsterM01") { id = "Rocko"; }
+        if (id === "DWK_MobsterM01") { id = "Rocko"; }
 
         document.addEventListener('DOMContentLoaded', () => {
             const image = document.getElementById("BannerImage");
