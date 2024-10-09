@@ -20,11 +20,9 @@
 
         let id = new URLSearchParams(window.location.search).get("id");
 
-        if (id === null) {
-            window.location.replace("Cards/index.html?id=DWK_MobsterM01");
+        if (id === null || id === "DWK_MobsterM01") {
+            window.location.replace("Cards/index.html?id=Rocko");
         }
-
-        if (id === "DWK_MobsterM01") { id = "Rocko"; }
 
         document.addEventListener('DOMContentLoaded', () => {
             const image = document.getElementById("BannerImage");
