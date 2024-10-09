@@ -9,6 +9,7 @@
     <meta property="og:title" content="Da Family Business">
     <meta property="og:description" content="Custom QR Codes">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
     <script>
 
@@ -21,7 +22,7 @@
         let id = new URLSearchParams(window.location.search).get("id");
 
         if (id === null || id === "DWK_MobsterM01") {
-            window.location.replace("Cards/index.html?id=Rocko");
+            window.location.replace("index.html?id=Rocko");
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -64,7 +65,7 @@
 <body onload="begin();">
     <div id="Main" class="main-container">
 
-        <img id="BannerImage" class="card" alt="Banner Image" onload="loadBanner();" />
+        <img id="BannerImage" class="card" alt="Banner Image"/>
 
         <h1>Da Goods</h1>
         <p>
